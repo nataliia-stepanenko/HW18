@@ -1,0 +1,22 @@
+.del-button {
+    /* height: 20px; */
+    margin: 1px 5px;
+    background-color: rgb(226, 119, 57);
+}
+
+.error {
+    border: 2px solid red;
+}
+
+.error-message {
+    color: red;
+}
+
+.box {
+    margin-right: 10px;
+}
+
+.fulfilled {
+    text-decoration: line-through;
+    color: grey;
+}
