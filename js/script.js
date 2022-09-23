@@ -10,13 +10,11 @@ input.addEventListener('focus', removeError);
 ul.addEventListener('click', removeToDo);
 ul.addEventListener('change', fulfillToDo);
 
-function addToDo (){
+function addToDo (value){
     const li = document.createElement('li');
-    li.innerHTML = input.value;
+    li.innerHTML = value;
     li.classList.add('task');
     ul.append(li);
-    input.value = '';
-    input.focus();
 
     const delBtn = document.createElement('button');
     delBtn.innerHTML = 'Delete';
@@ -38,7 +36,9 @@ function handleSubmit(event) {
         form.after(errorMessage);
         return;
     }
-    addToDo();
+    addToDo(input.value);
+    input.value = '';
+    input.focus();
 }
 
 function removeError() {
